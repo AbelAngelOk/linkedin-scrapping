@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <img id='icono' src="{{ url_for('static', filename='img/xicon.png') }}" alt="Icono de Python">
+    <div id="box">
+        <h1 id="titulo">Linkedin Scrapper</h1>
+        <h2 id="info">Dado un perfil de linkedin devuelve un excel con la información de la lista de empresas que contiene el perfil.</h2>
+    </div>
+   <div id="box2">
+    <form id="formulario" action="/scrap" method="post">
+        
+        <input type="email" id="email" required placeholder="Email">
+        <input type="password" id="password" required placeholder="Password">
+        
+        <button id="ejecutar">Ejecutar</button>
+    </form>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+   </div>
+   
+</body>
+</html>
